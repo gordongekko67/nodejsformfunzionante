@@ -7,11 +7,15 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
 
-
-
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
+
+app.post("/prova", function(req,res){
+  console.log("Ricevuto una richiesta POST  da prova");
+ 
+});
+
 
 app.post("/", function(req,res){
     console.log("Ricevuto una richiesta POST");
